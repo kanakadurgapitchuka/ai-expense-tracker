@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://kanakadurgapitchuka999_db_user:UPsfxBaDDHOpKDc5@cluster0.gxymtsz.mongodb.net/")
+client = MongoClient("mongodb+srv://kanakadurgapitchuka999_db_user:UPsfxBaDDHOpKDc5@cluster0.gxymtsz.mongodb.net/ai_expense_tracker?retryWrites=true&w=majority")
 
 db = client["ai_expense_tracker"]
 
