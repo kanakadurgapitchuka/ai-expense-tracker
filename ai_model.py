@@ -1,5 +1,5 @@
-import pandas as pd
-from sklearn.linear_model import LinearRegression
+def predict_category_wise(data):
+    return "General"
 
 def predict_category_wise(expenses):
 
