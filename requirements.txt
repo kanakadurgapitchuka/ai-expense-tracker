@@ -3,4 +3,6 @@ pymongo
 gunicorn
 openpyxl
 pandas
+scikit-learn
+numpy
 # update
