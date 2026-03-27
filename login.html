@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="login-bg">
+
+    <div class="glass-card">
+        {% if welcome %}
+            <div class="success-message">
+                ✨ Welcome {{ welcome }}! Account created successfully
+            </div>
+        {% endif %}
+
+        <h2 class="login-title">Sign in</h2>
+        <p class="subtitle">Track your expenses smartly</p>
+
+        <form method="POST">
+
+            <input type="text" name="username" placeholder="Username" required>
+
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+
+        <p class="bottom-link">
+            New user? <a href="/register">Register</a>
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}
