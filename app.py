@@ -9,7 +9,7 @@ import random
 import os
 
 print(os.listdir("static/images"))
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='static')
 app.secret_key = "supersecretkey123"
 
 DEFAULT_CATEGORIES = [
