@@ -6,8 +6,10 @@ from ai_model import predict_category_wise
 from openpyxl import Workbook
 import io
 import random
+import os
 
-app = Flask(__name__)
+print(os.listdir("static/images"))
+app = Flask(__name__, static_url_path='/static')
 app.secret_key = "supersecretkey123"
 
 DEFAULT_CATEGORIES = [
