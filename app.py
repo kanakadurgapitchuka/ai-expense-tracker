@@ -65,6 +65,7 @@ def login():
 
         if user and user["password"] == password:
             session["user_id"] = user["user_id"]
+            session["username"] = user["username"]   # 👈 ADD THIS
             return redirect("/dashboard")
 
         return "Invalid credentials"
