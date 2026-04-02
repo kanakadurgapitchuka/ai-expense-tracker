@@ -18,20 +18,26 @@
 </head>
 
 <body>
-    
     <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-coins"></i> Expense Tracker
-        </div>
 
-        <nav class="nav-links">
-            <a href="/">Home</a>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
-            <a href="/about">About</a>
-        </nav>
-    </header>
+   <header class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-coins"></i> Expense Tracker
+    </div>
+
+    <nav class="nav-links">
+        <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+
+        {% if session.get("user_id") %}
+            <a href="/dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        {% else %}
+            <a href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            <a href="/register"><i class="fa-solid fa-user-plus"></i> Register</a>
+        {% endif %}
+    </nav>
+</header>
 
     <!-- ================= PAGE CONTENT ================= -->
     <main>
