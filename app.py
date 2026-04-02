@@ -57,7 +57,7 @@ def register():
 def login():
     welcome = session.pop("welcome_user", None)
 
-    if request.method == "POST":
+    if request.method == "POST": 
         username = request.form["username"].strip()
         password = request.form["password"].strip()
 
