@@ -202,8 +202,6 @@
 
 <script>
 
-<script>
-
 /* ===== DATE FILTER ===== */
 function filterByDate() {
     const selectedDate = document.getElementById("dateFilter").value;
@@ -223,7 +221,7 @@ function resetFilter() {
 }
 
 /* ===== WAIT UNTIL PAGE LOAD ===== */
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
 
     /* ===== CHARTS ===== */
     const monthLabels = JSON.parse(document.getElementById("chart-labels").textContent);
