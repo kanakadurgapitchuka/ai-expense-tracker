@@ -287,14 +287,17 @@ def add_expense():
             if e.get("date", "").startswith(expense_month)
         ]
 
-        total_spent = sum(float(e["amount"]) for e in user_expenses)
-        budget = float(month_budget.get(category, 0))
-        # 🔔 80% Budget Alert
-        if budget > 0 and total_spent >= 0.8 * budget and total_spent <= budget:
-            session["warning_msg"] = f"You have used 80% of your budget for {category}!"
+        # 🔔 80% Alert
+    if budget > 0 and total_spent >= 0.8 * budget and total_spent < budget:
+        session["warning_msg"] = f"You have used 80% of your budget for {category}!"
 
-        if total_spent > budget:
-            session["error_msg"] = f"Budget exceeded for {category} ({expense_month})!"
+# 🔴 100% Used (NEW ADD)
+    elif total_spent == budget:
+        session["success_msg"] = f"You have fully used your budget for {category} (100%)!"
+
+# ❌ Exceeded
+    elif total_spent > budget:
+        session["error_msg"] = f"Budget exceeded for {category} ({expense_month})!"
 
         return redirect("/dashboard")
 
