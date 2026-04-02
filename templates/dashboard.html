@@ -259,7 +259,12 @@ if (pieLabels.length > 0) {
     });
 }
 
-/* ===== SweetAlert (FINAL WORKING) =============*\
+<script>
+
+/* ===== DATE FILTER ===== */
+/* ===== Charts ===== */
+
+/* ===== SweetAlert ===== */
 document.addEventListener("DOMContentLoaded", function() {
 
     {% if success_msg %}
@@ -288,6 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+/* DELETE CONFIRM */
 function confirmDelete(id) {
     Swal.fire({
         title: 'Are you sure?',
@@ -301,6 +307,6 @@ function confirmDelete(id) {
         }
     });
 }
-</script>
 
+</script>
 {% endblock %}
