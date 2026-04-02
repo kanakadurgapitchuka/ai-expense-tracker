@@ -261,36 +261,6 @@ if (pieLabels.length > 0) {
 
 /* ===== SweetAlert (FINAL WORKING) ===== */
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    {% if success_msg %}
-    Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: '{{ success_msg }}',
-        confirmButtonColor: '#667eea'
-    });
-    {% endif %}
-
-    {% if warning_msg %}
-    Swal.fire({
-        icon: 'warning',
-        title: 'Warning',
-        text: '{{ warning_msg }}',
-        confirmButtonColor: '#f39c12'
-    });
-    {% endif %}
-
-    {% if error_msg %}
-    Swal.fire({
-        icon: 'error',
-        title: 'Budget Alert',
-        text: '{{ error_msg }}',
-        confirmButtonColor: '#e74c3c'
-    });
-    {% endif %}
-
-});
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -298,8 +268,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Swal.fire({
         icon: 'success',
         title: 'Success',
-        text: '{{ success_msg }}',
-        confirmButtonColor: '#667eea'
+        text: '{{ success_msg }}'
     });
     {% endif %}
 
@@ -307,31 +276,26 @@ document.addEventListener("DOMContentLoaded", function() {
     Swal.fire({
         icon: 'warning',
         title: 'Warning',
-        text: '{{ warning_msg }}',
-        confirmButtonColor: '#f39c12'
+        text: '{{ warning_msg }}'
     });
     {% endif %}
 
     {% if error_msg %}
     Swal.fire({
         icon: 'error',
-        title: 'Budget Alert',
-        text: '{{ error_msg }}',
-        confirmButtonColor: '#e74c3c'
+        title: 'Error',
+        text: '{{ error_msg }}'
     });
     {% endif %}
 
 });
 
-/* DELETE CONFIRM */
 function confirmDelete(id) {
     Swal.fire({
         title: 'Are you sure?',
         text: "This expense will be deleted!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#e74c3c',
-        cancelButtonColor: '#6c757d',
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed) {
