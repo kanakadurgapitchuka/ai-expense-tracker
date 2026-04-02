@@ -286,7 +286,10 @@ def add_expense():
             })
             if e.get("date", "").startswith(expense_month)
         ]
+        total_spent = sum(float(e["amount"]) for e in user_expenses)
 
+        # 🔥 ADD THIS LINE (missing)
+        budget = float(month_budget.get(category, 0))
         # 🔔 80% Alert
     if budget > 0 and total_spent >= 0.8 * budget and total_spent < budget:
         session["warning_msg"] = f"You have used 80% of your budget for {category}!"
