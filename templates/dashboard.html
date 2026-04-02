@@ -292,6 +292,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    {% if success_msg %}
+    Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: '{{ success_msg }}',
+        confirmButtonColor: '#667eea'
+    });
+    {% endif %}
+
+    {% if warning_msg %}
+    Swal.fire({
+        icon: 'warning',
+        title: 'Warning',
+        text: '{{ warning_msg }}',
+        confirmButtonColor: '#f39c12'
+    });
+    {% endif %}
+
+    {% if error_msg %}
+    Swal.fire({
+        icon: 'error',
+        title: 'Budget Alert',
+        text: '{{ error_msg }}',
+        confirmButtonColor: '#e74c3c'
+    });
+    {% endif %}
+
+});
+
+/* DELETE CONFIRM */
 function confirmDelete(id) {
     Swal.fire({
         title: 'Are you sure?',
@@ -307,7 +339,6 @@ function confirmDelete(id) {
         }
     });
 }
-</script>
 </script>
 
 {% endblock %}
