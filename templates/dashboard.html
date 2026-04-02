@@ -202,8 +202,9 @@
 
 <script>
 
-/* ===== DATE FILTER ===== */
+<script>
 
+/* ===== DATE FILTER ===== */
 function filterByDate() {
     const selectedDate = document.getElementById("dateFilter").value;
     const cards = document.querySelectorAll(".expense-card");
@@ -221,52 +222,43 @@ function resetFilter() {
     });
 }
 
-/* ===== Charts ===== */
-
-const monthLabels = JSON.parse(document.getElementById("chart-labels").textContent);
-const monthData = JSON.parse(document.getElementById("chart-data").textContent);
-
-if (monthLabels.length > 0) {
-    new Chart(document.getElementById("monthlyChart"), {
-        type: "bar",
-        data: {
-            labels: monthLabels,
-            datasets: [{
-                label: "Monthly Spent ₹",
-                data: monthData,
-                borderRadius: 8
-            }]
-        },
-        options: { responsive: true }
-    });
-}
-
-const pieLabels = JSON.parse(document.getElementById("pie-labels").textContent);
-const pieData = JSON.parse(document.getElementById("pie-data").textContent);
-
-if (pieLabels.length > 0) {
-    new Chart(document.getElementById("categoryChart"), {
-        type: "bar",
-        data: {
-            labels: pieLabels,
-            datasets: [{
-                label: "Category Amount ₹",
-                data: pieData,
-                borderRadius: 8
-            }]
-        },
-        options: { responsive: true }
-    });
-}
-
-<script>
-
-/* ===== DATE FILTER ===== */
-/* ===== Charts ===== */
-
-/* ===== SweetAlert ===== */
+/* ===== WAIT UNTIL PAGE LOAD ===== */
 document.addEventListener("DOMContentLoaded", function() {
 
+    /* ===== CHARTS ===== */
+    const monthLabels = JSON.parse(document.getElementById("chart-labels").textContent);
+    const monthData = JSON.parse(document.getElementById("chart-data").textContent);
+
+    if (monthLabels.length > 0) {
+        new Chart(document.getElementById("monthlyChart"), {
+            type: "bar",
+            data: {
+                labels: monthLabels,
+                datasets: [{
+                    label: "Monthly Spent ₹",
+                    data: monthData
+                }]
+            }
+        });
+    }
+
+    const pieLabels = JSON.parse(document.getElementById("pie-labels").textContent);
+    const pieData = JSON.parse(document.getElementById("pie-data").textContent);
+
+    if (pieLabels.length > 0) {
+        new Chart(document.getElementById("categoryChart"), {
+            type: "bar",
+            data: {
+                labels: pieLabels,
+                datasets: [{
+                    label: "Category Amount ₹",
+                    data: pieData
+                }]
+            }
+        });
+    }
+
+    /* ===== ALERTS ===== */
     {% if success_msg %}
     Swal.fire({
         icon: 'success',
@@ -293,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-/* DELETE CONFIRM */
+/* ===== DELETE CONFIRM ===== */
 function confirmDelete(id) {
     Swal.fire({
         title: 'Are you sure?',
