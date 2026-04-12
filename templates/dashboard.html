@@ -17,8 +17,8 @@
     {% endfor %}
         </select>
     </form>
-    <!-- ================= TOP SUMMARY ================= -->
 
+    <!-- ================= TOP SUMMARY ================= -->
     <div class="summary-grid">
 
     <div class="summary-card card-spent">
@@ -47,13 +47,12 @@
     </div>
 
 </div>
-    <!-- 👉 ADD HERE -->
+
     {% if top_category %}
         <div style="margin-top:20px; padding:15px; background:#ffeaa7; border-radius:10px; text-align:center;">
             <b>🏆 Top Spending Category:</b> {{ top_category }}
         </div>
     {% endif %}
-    <!-- 🔥 Monthly Suggestion -->
 
     {% if suggestion %}
     <div style="margin-top:30px; padding:20px; border-radius:12px; background:linear-gradient(135deg,#667eea,#764ba2); color:white;">
@@ -63,7 +62,6 @@
     {% endif %}
 
     <!-- ================= ACTION BUTTONS ================= -->
-
     <div class="action-buttons">
 
     <a href="/add_expense" class="btn-action expense-btn">
@@ -74,15 +72,14 @@
         <i class="fa-solid fa-wallet"></i> Set Budget
     </a>
 
-    <!-- 🔥 NEW EXCEL BUTTON -->
     <a href="/export_excel" class="btn-action"
        style="background:linear-gradient(135deg,#27ae60,#2ecc71);">
         <i class="fa-solid fa-file-excel"></i> Download Excel
     </a>
 
 </div>
-    <!-- ================= CATEGORY TABLE ================= -->
 
+    <!-- ================= CATEGORY TABLE ================= -->
     <div class="table-section">
         <h3>Category Budgets Overview</h3>
 
@@ -132,7 +129,6 @@
     </div>
 
     <!-- ================= CHART SECTION ================= -->
-
     <div class="charts-container">
         <div class="chart-card">
             <h3>📊 Monthly Analysis</h3>
@@ -146,7 +142,6 @@
     </div>
 
     <!-- ================= EXPENSE CARDS ================= -->
-
     <div class="card-section">
         <h3>All Expenses</h3>
 
@@ -181,22 +176,10 @@
 </div>
 
 <!-- ================= DATA ================= -->
-
-<script type="application/json" id="chart-labels">
-    {{ labels | tojson }}
-</script>
-
-<script type="application/json" id="chart-data">
-    {{ spent_data | tojson }}
-</script>
-
-<script type="application/json" id="pie-labels">
-    {{ pie_labels | tojson }}
-</script>
-
-<script type="application/json" id="pie-data">
-    {{ pie_data | tojson }}
-</script>
+<script type="application/json" id="chart-labels">{{ labels | tojson }}</script>
+<script type="application/json" id="chart-data">{{ spent_data | tojson }}</script>
+<script type="application/json" id="pie-labels">{{ pie_labels | tojson }}</script>
+<script type="application/json" id="pie-data">{{ pie_data | tojson }}</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -236,24 +219,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* ===== ALERTS ===== */
 
-{% if success_msg %}
-Swal.fire("Success", "{{ success_msg }}", "success");
-{% endif %}
+    {% if success_msg %}
+    Swal.fire("Success", "{{ success_msg }}", "success");
+    {% endif %}
 
-{% if warning_msg %}
-Swal.fire("Warning", "{{ warning_msg }}", "warning");
-{% endif %}
+    {% if warning_msg %}
+    Swal.fire("Warning", "{{ warning_msg }}", "warning");
+    {% endif %}
 
-{% if error_msg %}
-Swal.fire({
-    icon: 'warning',
-    title: 'Budget Alert',
-    text: '{{ error_msg }}'
-});
-{% endif %}
+    {% if error_msg %}
+    Swal.fire({
+        icon: 'warning',
+        title: 'Budget Alert',
+        text: '{{ error_msg }}'
+    });
+    {% endif %}
+
+});  // ✅ THIS WAS MISSING
 
 /* DELETE */
-    
 function confirmDelete(id) {
     Swal.fire({
         title: "Are you sure?",
@@ -267,4 +251,5 @@ function confirmDelete(id) {
     });
 }
 </script>
+
 {% endblock %}
