@@ -67,11 +67,13 @@ def login():
         if user and user["password"] == password:
             session["user_id"] = user["user_id"]
             session["username"] = user["username"]
+            session["success_msg"] = "Login successful!" 
             return redirect("/dashboard")
 
         return "Invalid credentials"
 
     return render_template("login.html", welcome=welcome, success_msg=success_msg)
+    
 # ================= SET BUDGET =================
 @app.route("/set_budget", methods=["GET", "POST"])
 def set_budget():
