@@ -15,13 +15,9 @@
         <p class="subtitle">Track your expenses smartly</p>
 
         <form method="POST">
-
             <input type="text" name="username" placeholder="Username" required>
-
             <input type="password" name="password" placeholder="Password" required>
-
             <button type="submit" class="login-btn">Login</button>
-
         </form>
 
         <p class="bottom-link">
@@ -31,5 +27,20 @@
     </div>
 
 </div>
+
+<!-- ✅ SCRIPT OUTSIDE -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    {% if success_msg %}
+    Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: '{{ success_msg }}'
+    });
+    {% endif %}
+
+});
+</script>
 
 {% endblock %}
