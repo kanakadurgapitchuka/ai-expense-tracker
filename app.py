@@ -56,8 +56,9 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     welcome = session.pop("welcome_user", None)
+    success_msg = session.pop("success_msg", None)   # 🔥 ADD THIS
 
-    if request.method == "POST": 
+    if request.method == "POST":
         username = request.form["username"].strip()
         password = request.form["password"].strip()
 
@@ -65,13 +66,12 @@ def login():
 
         if user and user["password"] == password:
             session["user_id"] = user["user_id"]
-            session["username"] = user["username"]   # 👈 ADD THIS
+            session["username"] = user["username"]
             return redirect("/dashboard")
 
         return "Invalid credentials"
 
-    return render_template("login.html", welcome=welcome)
-
+    return render_template("login.html", welcome=welcome, success_msg=success_msg)
 # ================= SET BUDGET =================
 @app.route("/set_budget", methods=["GET", "POST"])
 def set_budget():
