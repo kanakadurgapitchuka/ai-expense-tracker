@@ -235,21 +235,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     /* ===== ALERTS ===== */
-    {% if success_msg %}
-    Swal.fire("Success", "{{ success_msg }}", "success");
-    {% endif %}
 
-    {% if warning_msg %}
-    Swal.fire("Warning", "{{ warning_msg }}", "warning");
-    {% endif %}
+{% if success_msg %}
+Swal.fire("Success", "{{ success_msg }}", "success");
+{% endif %}
 
-    {% if error_msg %}
-    Swal.fire("Error", "{{ error_msg }}", "error");
-    {% endif %}
+{% if warning_msg %}
+Swal.fire("Warning", "{{ warning_msg }}", "warning");
+{% endif %}
 
+{% if error_msg %}
+Swal.fire({
+    icon: 'warning',
+    title: 'Budget Alert',
+    text: '{{ error_msg }}'
 });
+{% endif %}
 
 /* DELETE */
+    
 function confirmDelete(id) {
     Swal.fire({
         title: "Are you sure?",
