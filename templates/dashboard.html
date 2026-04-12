@@ -250,6 +250,29 @@ function confirmDelete(id) {
         }
     });
 }
+    /* ===== DATE FILTER ===== */
+function filterByDate() {
+    const selectedDate = document.getElementById("dateFilter").value;
+    const cards = document.querySelectorAll(".expense-card");
+
+    cards.forEach(card => {
+        const cardDate = card.getAttribute("data-date");
+
+        if (selectedDate === "all" || cardDate === selectedDate) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+function resetFilter() {
+    document.getElementById("dateFilter").value = "all";
+
+    document.querySelectorAll(".expense-card").forEach(card => {
+        card.style.display = "block";
+    });
+}
 </script>
 
 {% endblock %}
