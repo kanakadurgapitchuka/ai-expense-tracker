@@ -380,8 +380,10 @@ def export_excel():
 # ================= LOGOUT =================
 @app.route("/logout")
 def logout():
+    msg = "Logged out successfully!"
     session.clear()
-    return redirect("/")
-
+    session["success_msg"] = msg
+    return redirect("/login")
+    
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
