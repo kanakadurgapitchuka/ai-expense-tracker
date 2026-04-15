@@ -16,7 +16,15 @@
 
         <form method="POST">
             <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <div style="position: relative;">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+         <span onclick="togglePassword()" 
+          style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
+                 cursor:pointer; font-size:14px; color:#555;">
+            Show
+        </span>
+        </div>
             <button type="submit" class="login-btn">Login</button>
         </form>
 
@@ -29,18 +37,33 @@
 </div>
 
 <!-- ✅ SCRIPT OUTSIDE -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
 
-    {% if success_msg %}
-    Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: '{{ success_msg }}'
-    });
-    {% endif %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+{% if success_msg %}
+Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    text: '{{ success_msg }}'
+});
+{% endif %}
 
 });
+
+/* 👇 ADD THIS */
+function togglePassword() {
+    const pwd = document.getElementById("password");
+    const toggle = event.target;
+
+    if (pwd.type === "password") {
+        pwd.type = "text";
+        toggle.innerText = "Hide";
+    } else {
+        pwd.type = "password";
+        toggle.innerText = "Show";
+    }
+}
 </script>
 
 {% endblock %}
