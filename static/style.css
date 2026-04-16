@@ -725,13 +725,12 @@ body{
     }
 
 }
+
 .footer {
-    width: 100%;
-    background-color: #2ecc71;
+    width: 100vw;
+    margin: 0;
+    padding: 15px 0;
+    background-color: #3498db;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
 }
