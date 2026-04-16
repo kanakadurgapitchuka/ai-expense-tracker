@@ -734,3 +734,82 @@ body{
     color: white;
     text-align: center;
 }
+
+.features {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f7fb;
+}
+
+.features h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 250px;
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* 🔥 HOVER ANIMATION */
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* 🔵 ICON CIRCLE TOP */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+}
+
+/* TEXT */
+.feature-card h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.feature-card button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff6a00, #ff9f43);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feature-card button:hover {
+    opacity: 0.8;
+}
