@@ -736,9 +736,12 @@ body{
 }
 
 
+
+/* ===== FEATURES SECTION ===== */
 .features {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px 80px;
+    margin-top: -50px; /* 🔥 removes gap from hero */
     background: linear-gradient(135deg, #4facfe, #00c6ff);
 }
 
@@ -748,25 +751,34 @@ body{
     color: white;
 }
 
-/* CARD */
+/* ===== CONTAINER ===== */
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARD ===== */
 .feature-card {
-    background: rgba(255, 255, 255, 0.15);   /* glass effect 🔥 */
-    padding: 40px 20px 25px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 20px 25px;
     border-radius: 15px;
     text-align: center;
     position: relative;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: all 0.3s ease;
     color: white;
 }
 
-/* HOVER */
+/* ===== HOVER ===== */
 .feature-card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-10px) scale(1.05);
 }
 
-/* ICON */
+/* ===== ICON ===== */
 .icon-circle {
     width: 65px;
     height: 65px;
@@ -778,24 +790,27 @@ body{
     justify-content: center;
     font-size: 26px;
     position: absolute;
-    top: -30px;
+    top: -32px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .feature-card h3 {
     margin-top: 35px;
     margin-bottom: 10px;
     color: white;
+    font-size: 18px;
 }
 
 .feature-card p {
     font-size: 14px;
     color: #e0f7ff;
+    margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .feature-card button {
     padding: 8px 18px;
     border: none;
@@ -804,4 +819,15 @@ body{
     color: #3498db;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.feature-card button:hover {
+    background: #f1f1f1;
+}
+
+/* ===== BODY FIX (IMPORTANT) ===== */
+body {
+    margin: 0;
+    padding: 0;
 }
