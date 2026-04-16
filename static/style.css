@@ -736,13 +736,24 @@ body{
 }
 
 
+/* ===== BODY (GLOBAL BACKGROUND) ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* 🔥 light smooth */
+}
+
+/* ===== HERO ===== */
+.hero-section {
+    background: transparent; /* 🔥 same background continue */
+}
 
 /* ===== FEATURES SECTION ===== */
 .features {
     text-align: center;
     padding: 100px 20px 80px;
     margin-top: -50px;
-    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    background: transparent; /* 🔥 NO COLOR BREAK */
 }
 
 .features h2 {
@@ -759,7 +770,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* ===== CARD (FINAL) ===== */
+/* ===== CARD ===== */
 .feature-card {
     width: 250px;
     background: white;
@@ -821,10 +832,4 @@ body{
 
 .feature-card button:hover {
     opacity: 0.9;
-}
-
-/* ===== BODY FIX ===== */
-body {
-    margin: 0;
-    padding: 0;
 }
