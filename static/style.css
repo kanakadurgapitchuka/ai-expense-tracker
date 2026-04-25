@@ -842,3 +842,25 @@ body{
     border-radius: 10px;
     width: 180px;
 }
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    color: white;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 40%;
+    text-align: center;
+}
+
+.right img {
+    width: 130px;
+    border-radius: 50%;
+}
