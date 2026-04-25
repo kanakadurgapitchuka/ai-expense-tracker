@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% block content %}
@@ -6,7 +5,6 @@
 <div class="login-bg">
 
     <div class="glass-card">
-
         {% if welcome %}
             <div class="success-message">
                 ✨ Welcome {{ welcome }}! Account created successfully
@@ -16,19 +14,17 @@
         <h2 class="login-title">Sign in</h2>
         <p class="subtitle">Track your expenses smartly</p>
 
-        <form method="POST">
+        <form method="POST"> 
             <input type="text" name="username" placeholder="Username" required>
-
             <div style="position: relative;">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
 
-                <span onclick="togglePassword()" 
-                      style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
-                             cursor:pointer; font-size:14px; color:#555;">
-                    Show
-                </span>
-            </div>
-
+         <span onclick="togglePassword()" 
+          style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
+                 cursor:pointer; font-size:14px; color:#555;">
+            Show
+        </span>
+        </div>
             <button type="submit" class="login-btn">Login</button>
         </form>
 
@@ -43,7 +39,7 @@
 <!-- ✅ SCRIPT OUTSIDE -->
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
 
 {% if success_msg %}
 Swal.fire({
@@ -55,6 +51,7 @@ Swal.fire({
 
 });
 
+/* 👇 ADD THIS */
 function togglePassword() {
     const pwd = document.getElementById("password");
     const toggle = event.target;
