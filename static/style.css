@@ -843,3 +843,126 @@ body{
     width: 130px;
     border-radius: 50%;
 }
+
+
+/* ===== HERO BACKGROUND UPGRADE ===== */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    text-align: left;
+
+    background: linear-gradient(135deg, #667eea, #00c6ff); /* 🔥 rich gradient */
+}
+
+/* ===== TEXT IMPROVE ===== */
+
+.left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.left span {
+    color: #ffffff;
+}
+
+.left p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+}
+
+/* ===== BUTTON STYLE ===== */
+
+.btn {
+    background: #1f2d3d;
+    border-radius: 8px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: black;
+    transform: translateY(-3px);
+}
+
+.btn2 {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn2:hover {
+    background: white;
+    color: black;
+}
+
+/* ===== RIGHT IMAGE GLOW ===== */
+
+.right img {
+    width: 140px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* 🔥 glow */
+}
+
+/* ===== TITLE STYLE ===== */
+
+.right h2 {
+    color: white;
+    margin-top: 10px;
+}
+
+.right p {
+    color: rgba(255,255,255,0.8);
+}
+
+/* ===== CARDS PREMIUM ===== */
+
+.features {
+    margin-top: -60px; /* 🔥 overlap effect */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    width: 220px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ICON COLOR */
+
+.card i {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #667eea;
+}
+
+/* ===== HOW SECTION ===== */
+
+.how {
+    margin-top: 50px;
+}
+
+.steps div {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
