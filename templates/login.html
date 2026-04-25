@@ -2,29 +2,48 @@
 
 {% block content %}
 
-<div class="login-bg">
+<!-- HERO SECTION (ADD THIS TOP) -->
+<section class="hero">
+    <div class="left">
+        <h1>Take Control of <br> <span>Your Expenses</span></h1>
+        <p>Track your expenses, analyze your spending patterns and get AI-powered insights.</p>
+        <button class="btn">Get Started</button>
+        <button class="btn2">Learn More</button>
+    </div>
 
+    <div class="right">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <h2>EXPENSES TRACKER</h2>
+        <p>Efficient • User-friendly • Insightful</p>
+    </div>
+</section>
+
+<!-- LOGIN SECTION -->
+<div class="login-bg">
     <div class="glass-card">
+
         {% if welcome %}
             <div class="success-message">
                 ✨ Welcome {{ welcome }}! Account created successfully
             </div>
         {% endif %}
 
-        <h2 class="login-title">Sign in</h2>
+        <h2 class="login-title">🔐 Sign in</h2>
         <p class="subtitle">Track your expenses smartly</p>
 
         <form method="POST">
             <input type="text" name="username" placeholder="Username" required>
-            <div style="position: relative;">
-        <input type="password" id="password" name="password" placeholder="Password" required>
 
-         <span onclick="togglePassword()" 
-          style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
-                 cursor:pointer; font-size:14px; color:#555;">
-            Show
-        </span>
-        </div>
+            <div style="position: relative;">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <span onclick="togglePassword()" 
+                style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
+                       cursor:pointer; font-size:14px; color:#555;">
+                    Show
+                </span>
+            </div>
+
             <button type="submit" class="login-btn">Login</button>
         </form>
 
@@ -33,13 +52,56 @@
         </p>
 
     </div>
-
 </div>
 
-<!-- ✅ SCRIPT OUTSIDE -->
+<!-- FEATURES -->
+<section class="features">
+    <div class="card">
+        <h3>Track Expenses</h3>
+        <p>Add and track your daily expenses</p>
+    </div>
 
+    <div class="card">
+        <h3>View Reports</h3>
+        <p>Visualize your spending with charts</p>
+    </div>
+
+    <div class="card">
+        <h3>AI Predictions</h3>
+        <p>Get future expense predictions</p>
+    </div>
+
+    <div class="card">
+        <h3>Budget Control</h3>
+        <p>Set budget and get alerts</p>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+    <h2>HOW IT WORKS</h2>
+    <div class="steps">
+        <div>Login</div>
+        <div>Add Expenses</div>
+        <div>Analyze</div>
+        <div>Insights</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Expense Tracker</h3>
+    <p>© 2026 Expense Tracker. All rights reserved.</p>
+    <div>
+        <a href="#">Contact</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms</a>
+    </div>
+</footer>
+
+<!-- SCRIPT -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 
 {% if success_msg %}
 Swal.fire({
@@ -51,7 +113,6 @@ Swal.fire({
 
 });
 
-/* 👇 ADD THIS */
 function togglePassword() {
     const pwd = document.getElementById("password");
     const toggle = event.target;
