@@ -64,27 +64,6 @@ body{
     letter-spacing: 1px;
 }
 
-/* ================= HERO ================= */
-
-.hero{
-    height:85vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:20px;
-}
-
 /* ================= GLASS STYLE ================= */
 
 .dashboard-container,
