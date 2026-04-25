@@ -14,9 +14,10 @@ body{
     margin:0;
     font-family: "Segoe UI", Arial, sans-serif;
 
-    background: linear-gradient(135deg, #667eea, #00c6ff);
-    min-height:100vh;
+    /* 🔥 smooth professional gradient */
+    background: linear-gradient(to right, #6a85f1, #8fd3f4);
 
+    min-height:100vh;
 }
 
 /* ================= NAVBAR ================= */
@@ -470,6 +471,8 @@ body{
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
 /* ================= HERO SECTION (Aesthetic Version) ================= */
 
 .hero-section {
@@ -720,14 +723,15 @@ body{
 
 /* ===== HOME PAGE HERO ===== */
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 60px;
-    color: white;
+.hero{
+    height:85vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0 80px;
+    text-align:left;
 }
-
 .left {
     width: 50%;
 }
@@ -1007,4 +1011,27 @@ body{
     margin: auto;
     font-weight: bold;
     margin-bottom: 10px;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+footer {
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
