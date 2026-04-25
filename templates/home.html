@@ -1,29 +1,72 @@
+
 {% extends "base.html" %}
+
 {% block content %}
 
-<div class="hero-section">
+<div class="login-bg">
 
-    <div class="hero-content">
+    <div class="glass-card">
 
-        <img src="{{ url_for('static', filename='images/girl.png') }}" 
-     alt="Girl Avatar" 
-     class="hero-img">
+        {% if welcome %}
+            <div class="success-message">
+                ✨ Welcome {{ welcome }}! Account created successfully
+            </div>
+        {% endif %}
 
-        <h1>EXPENSES TRACKER</h1>
+        <h2 class="login-title">Sign in</h2>
+        <p class="subtitle">Track your expenses smartly</p>
 
-        <div class="hero-line">
-            <span></span>
-            <i class="fa-solid fa-star"></i>
-            <span></span>
-        </div>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
 
-        <p>Efficient - User-friendly - Insightful</p>
+            <div style="position: relative;">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <span onclick="togglePassword()" 
+                      style="position:absolute; right:10px; top:50%; transform:translateY(-50%);
+                             cursor:pointer; font-size:14px; color:#555;">
+                    Show
+                </span>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <p class="bottom-link">
+            New user? <a href="/register">Register</a>
+        </p>
 
     </div>
 
 </div>
 
-    </div>
-</section>
+<!-- ✅ SCRIPT OUTSIDE -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+{% if success_msg %}
+Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    text: '{{ success_msg }}'
+});
+{% endif %}
+
+});
+
+function togglePassword() {
+    const pwd = document.getElementById("password");
+    const toggle = event.target;
+
+    if (pwd.type === "password") {
+        pwd.type = "text";
+        toggle.innerText = "Hide";
+    } else {
+        pwd.type = "password";
+        toggle.innerText = "Show";
+    }
+}
+</script>
 
 {% endblock %}
