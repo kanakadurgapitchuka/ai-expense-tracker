@@ -724,13 +724,12 @@ body{
 /* ===== HOME PAGE HERO ===== */
 
 .hero{
-    height:85vh;
+    height:70vh;
     display:flex;
-    flex-direction:row;
     justify-content:space-between;
     align-items:center;
     padding: 0 80px;
-    text-align:left;
+    background: transparent;   /* 🔥 important */
 }
 .left {
     width: 50%;
@@ -786,74 +785,82 @@ body{
 .features {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: -60px;   /* 🔥 floating effect */
-    margin-bottom: 40px;
+    gap: 30px;
+    margin: 60px 0;
 }
 
 .card {
-    background: white;
-    color: black;
-    padding: 25px;
-    border-radius: 16px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 20px;
     width: 220px;
     text-align: center;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 🔥 depth */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card i {
     font-size: 28px;
+    color: #2e9e4f;   /* 🔥 green like reference */
     margin-bottom: 10px;
-    color: #667eea;
 }
-
-/* ===== HOW IT WORKS ===== */
-
 .how {
     text-align: center;
-    margin-top: 40px;
-    color: white;
+    margin-top: 60px;
+}
+
+.how h2 {
+    color: #2e9e4f;
+    font-size: 32px;
+    margin-bottom: 40px;
 }
 
 .steps {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.steps div {
+.step {
     background: white;
-    color: black;
-    padding: 15px;
-    border-radius: 10px;
-    width: 180px;
-}
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 60px;
-    color: white;
-}
-
-.left {
-    width: 50%;
-}
-
-.right {
-    width: 40%;
+    width: 220px;
+    padding: 30px 20px;
+    border-radius: 20px;
     text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    position: relative;
 }
 
-.right img {
-    width: 130px;
+.step i {
+    font-size: 30px;
+    color: #2e9e4f;
+    margin-bottom: 15px;
+}
+
+.number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: #a5d6a7;
+    color: white;
+    font-size: 14px;
+
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-}
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ===== HERO BACKGROUND UPGRADE ===== */
 
