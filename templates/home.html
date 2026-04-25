@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- HERO SECTION (NEE ORIGINAL) -->
 <div class="hero-section">
 
     <div class="hero-content">
 
         <img src="{{ url_for('static', filename='images/girl.png') }}" 
-             alt="Girl Avatar" 
-             class="hero-img">
+     alt="Girl Avatar" 
+     class="hero-img">
 
         <h1>EXPENSES TRACKER</h1>
 
@@ -23,66 +22,5 @@
     </div>
 
 </div>
-
-<!-- NEW HERO (ADDED - DO NOT REMOVE ABOVE ONE) -->
-<section class="hero">
-    <div class="left">
-        <h1>Take Control of <br> <span>Your Expenses</span></h1>
-        <p>Track your expenses, analyze your spending patterns and get AI-powered insights.</p>
-        <button class="btn">Get Started</button>
-        <button class="btn2">Learn More</button>
-    </div>
-
-    <div class="right">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-        <h2>EXPENSES TRACKER</h2>
-        <p>Efficient • User-friendly • Insightful</p>
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-    <div class="card">
-        <h3>💸 Track Expenses</h3>
-        <p>Add and track your daily expenses easily</p>
-    </div>
-
-    <div class="card">
-        <h3>📊 View Reports</h3>
-        <p>Visualize your spending with charts</p>
-    </div>
-
-    <div class="card">
-        <h3>🤖 AI Predictions</h3>
-        <p>Get future expense predictions</p>
-    </div>
-
-    <div class="card">
-        <h3>💰 Budget Control</h3>
-        <p>Set budget and get alerts</p>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how">
-    <h2>HOW IT WORKS</h2>
-    <div class="steps">
-        <div>Login</div>
-        <div>Add Expenses</div>
-        <div>Analyze</div>
-        <div>Insights</div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <h3>Expense Tracker</h3>
-    <p>© 2026 Expense Tracker. All rights reserved.</p>
-    <div>
-        <a href="#">Contact</a> |
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms</a>
-    </div>
-</footer>
 
 {% endblock %}
