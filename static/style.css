@@ -960,57 +960,44 @@ body{
     color: #667eea;
 }
 
-/* ===== HOW SECTION ===== */
-
-.how {
-    margin-top: 50px;
-}
-
-.steps div {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-/* ===== HOW IT WORKS PREMIUM ===== */
+/* ===== HOW IT WORKS CLEAN ===== */
 
 .how {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 80px;
     color: white;
 }
 
 .how h2 {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .steps {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .step {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 160px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    width: 180px;
     text-align: center;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
 
 .step:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 }
 
 .circle {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: #667eea;
     color: white;
     border-radius: 50%;
@@ -1020,9 +1007,4 @@ body{
     margin: auto;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.arrow {
-    font-size: 25px;
-    color: white;
 }
