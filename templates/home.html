@@ -1,26 +1,26 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
 <div class="hero-section">
 
-    <div class="hero-content">
-
-        <img src="{{ url_for('static', filename='images/girl.png') }}" 
-     alt="Girl Avatar" 
-     class="hero-img">
-
-        <h1>EXPENSES TRACKER</h1>
-
-        <div class="hero-line">
-            <span></span>
-            <i class="fa-solid fa-star"></i>
-            <span></span>
-        </div>
-
-        <p>Efficient - User-friendly - Insightful</p>
-
+    <div class="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
     </div>
+
+    <h1 id="title">EXPENSES TRACKER</h1>
+
+    <p class="tagline">Efficient - User-friendly - Insightful</p>
+
+    <button onclick="goToLogin()">Get Started</button>
 
 </div>
 
-{% endblock %}
+<script src="script.js"></script>
+
+</body>
+</html>
