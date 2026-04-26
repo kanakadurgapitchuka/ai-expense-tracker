@@ -2,8 +2,11 @@
 <html>
 <head>
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Flask CSS link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <div class="hero-section">
@@ -12,7 +15,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
     </div>
 
-    <h1 id="title">EXPENSES TRACKER</h1>
+    <h1 class="title">EXPENSES TRACKER</h1>
 
     <p class="tagline">Efficient - User-friendly - Insightful</p>
 
@@ -20,7 +23,12 @@
 
 </div>
 
-<script src="script.js"></script>
+<!-- JS inside same file -->
+<script>
+function goToLogin() {
+    window.location.href = "/login";
+}
+</script>
 
 </body>
 </html>
