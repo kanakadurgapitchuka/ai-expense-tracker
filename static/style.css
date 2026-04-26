@@ -725,3 +725,78 @@ body{
     }
 
 }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🌈 Background */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #5f86d6, #6fd3c0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🧊 Glass Card */
+.glass-card {
+    width: 350px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* 👤 Avatar */
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* ✨ Animated Title */
+.title {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.title:hover {
+    animation: floatText 0.8s infinite;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-8px); opacity: 0.6; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* 📝 Tagline */
+.tagline {
+    color: white;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+/* 🔥 Button */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #5f86d6;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #000;
+    color: white;
+    transform: scale(1.05);
+}
