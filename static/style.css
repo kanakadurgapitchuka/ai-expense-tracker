@@ -725,3 +725,16 @@ body{
     }
 
 }
+footer {
+    width: 100%;
+    text-align: center;   /* 🔥 main fix */
+    padding: 15px 0;
+    color: white;
+    background: transparent;
+
+    position: relative;   /* 🔥 important */
+}
+footer p {
+    text-align: center;
+    margin: 0;
+}
