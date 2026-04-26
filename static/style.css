@@ -729,7 +729,7 @@ footer {
     width: 100%;
     text-align: center;   /* 🔥 main fix */
     padding: 15px 0;
-    color: white;
+    color: dark blue;
     background: transparent;
 
     position: relative;   /* 🔥 important */
