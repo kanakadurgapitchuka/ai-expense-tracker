@@ -11,13 +11,10 @@ html, body{
 }
 
 body{
-    margin:0;
     font-family: "Segoe UI", Arial, sans-serif;
-
-    /* 🔥 smooth professional gradient */
-    background: linear-gradient(to right, #6a85f1, #8fd3f4);
-
+    background: linear-gradient(135deg,#a1c4fd,#c2e9fb);
     min-height:100vh;
+    color:#1f2d3d;
 }
 
 /* ================= NAVBAR ================= */
@@ -65,6 +62,27 @@ body{
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:20px;
 }
 
 /* ================= GLASS STYLE ================= */
@@ -471,8 +489,6 @@ body{
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-
 /* ================= HERO SECTION (Aesthetic Version) ================= */
 
 .hero-section {
@@ -708,337 +724,4 @@ body{
         text-align: center;
     }
 
-}
-
-
-.footer {
-    width: 100vw;
-    margin: 0;
-    padding: 15px 0;
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-}
-
-
-/* ===== HOME PAGE HERO ===== */
-
-.hero{
-    height:70vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 0 80px;
-    background: transparent;   /* 🔥 important */
-}
-.left {
-    width: 50%;
-}
-
-.left h1 {
-    font-size: 42px;
-}
-
-.left span {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.left p {
-    margin: 20px 0;
-    font-size: 16px;
-}
-
-.btn {
-    padding: 10px 20px;
-    background: #1f2d3d;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.btn2 {
-    padding: 10px 20px;
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* RIGHT SIDE */
-
-.right {
-    text-align: center;
-}
-
-.right img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* ===== FEATURES ===== */
-
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 60px 0;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 30px 20px;
-    width: 220px;
-    text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card i {
-    font-size: 28px;
-    color: #2e9e4f;   /* 🔥 green like reference */
-    margin-bottom: 10px;
-}
-.how {
-    text-align: center;
-    margin-top: 60px;
-}
-
-.how h2 {
-    color: #2e9e4f;
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.step {
-    background: white;
-    width: 220px;
-    padding: 30px 20px;
-    border-radius: 20px;
-    text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    position: relative;
-}
-
-.step i {
-    font-size: 30px;
-    color: #2e9e4f;
-    margin-bottom: 15px;
-}
-
-.number {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    background: #a5d6a7;
-    color: white;
-    font-size: 14px;
-
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ===== HERO BACKGROUND UPGRADE ===== */
-
-.hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 80px;
-    text-align: left;
-
-    background: linear-gradient(135deg, #667eea, #00c6ff); /* 🔥 rich gradient */
-}
-
-/* ===== TEXT IMPROVE ===== */
-
-.left h1 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.left span {
-    color: #ffffff;
-}
-
-.left p {
-    color: rgba(255,255,255,0.85);
-    font-size: 16px;
-}
-
-/* ===== BUTTON STYLE ===== */
-
-.btn {
-    background: #1f2d3d;
-    border-radius: 8px;
-    padding: 12px 25px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: black;
-    transform: translateY(-3px);
-}
-
-.btn2 {
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 12px 25px;
-    transition: 0.3s;
-}
-
-.btn2:hover {
-    background: white;
-    color: black;
-}
-
-/* ===== RIGHT IMAGE GLOW ===== */
-
-.right img {
-    width: 140px;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* 🔥 glow */
-}
-
-/* ===== TITLE STYLE ===== */
-
-.right h2 {
-    color: white;
-    margin-top: 10px;
-}
-
-.right p {
-    color: rgba(255,255,255,0.8);
-}
-
-/* ===== CARDS PREMIUM ===== */
-
-.features {
-    margin-top: -60px; /* 🔥 overlap effect */
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    width: 220px;
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-/* ICON COLOR */
-
-.card i {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #667eea;
-}
-
-/* ===== HOW IT WORKS CLEAN ===== */
-
-.how {
-    text-align: center;
-    margin-top: 80px;
-    color: white;
-}
-
-.how h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.step {
-    background: white;
-    padding: 25px 20px;
-    border-radius: 15px;
-    width: 180px;
-    text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
-
-.step:hover {
-    transform: translateY(-10px);
-}
-
-.circle {
-    width: 45px;
-    height: 45px;
-    background: #667eea;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    margin-bottom: 60px;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 25px;
-    width: 220px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    transition: 0.3s;
-}
-
-footer {
-    background: transparent;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
